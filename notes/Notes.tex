@@ -1,0 +1,125 @@
+\documentclass[leqno]{article}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{caption}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{multicol} \usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array}
+\usepackage{hyperref}
+\usepackage{eso-pic}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+% geometry
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% paragraph length
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{observation}{Observation}
+
+\newcommand{\incfig}[1]{%
+\center
+\def\svgwidth{0.9\columnwidth}
+\import{./figures/}{#1.pdf_tex}
+}
+\newcommand{\incimg}[1]{%
+\center
+\includegraphics[width=0.9\columnwidth]{images/#1}
+}
+\pdfsuppresswarningpagegroup=1
+
+\title{Limit of the covering method for hexagonal lattice}
+\author{Abel Doñate Muñoz}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Basic definitions}
+\begin{definition}[Covering lattice]
+
+\end{definition}
+
+\begin{definition}[Limit of covering lattice]
+
+\end{definition}
+
+
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./figures/lattice2.png}
+         \caption{$I=2$. Lattice M}
+         \label{fig:I2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./figures/lattice3.png}
+         \caption{$I=3$}
+         \label{fig:3}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{./figures/lattice4.png}
+         \caption{$I=4$}
+         \label{fig:five over x}
+     \end{subfigure}
+        \caption{Iteration of covering lattices}
+        \label{fig:4}
+\end{figure}
+
+
+We can observe the shape of the limit of covering lattice $L$. It reminds us a sort of Sierpinski triangle, but instead of triangles we have the repeating pattern \ref{fig:I2}.
+
+\begin{definition}[Weak vertex] We say a vertex of $L$ is weak if it is one exterior vertex of \ref{fig:I2} 
+\end{definition}
+
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=\textwidth]{./figures/sierpinskimod.png}
+    \caption{Sierpinski modified triangle}
+    \label{fig:sier}
+\end{figure}
+
+\begin{observation}All the information we need is encapsulated in the pattern  \ref{fig:I2} and the modification of Sierpinski triangle \ref{fig:sier}.
+
+The lattice $M$ gives us the local information, and the modified Sierpinski the global behaviour setting every weak vertex of $L$ as a vertex of Sierpinski modified triangle.
+\end{observation}
+
+
+
+
+
+\end{document}
