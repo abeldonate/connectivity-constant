@@ -21,6 +21,7 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{graphicx}
+\usepackage{svg}
 
 % figure support
 \usepackage{import}
@@ -66,33 +67,38 @@
 
 \section{Basic definitions}
 \begin{definition}[Covering lattice]
-
+Given a lattice $L$ we define its covering lattice $L'$ as follows:
+ \begin{enumerate}[topsep=-6pt, itemsep=0pt]
+   \item For every vertex of $L$ create a vertex on each of its neighbour edges
+   \item Unite the new vertices by an edge (just the ones that are part of the same face)
+   \item Unite the vertices that lie in the same edge of $L$
+\end{enumerate}
 \end{definition}
 
 \begin{definition}[Limit of covering lattice]
-
+The lattice $\mathcal{L}$ is the limit of the coverings $L \to  L' \to L'' \to \ldots$. We will discuss later whether the limit exists.
 \end{definition}
 
-
+If we take the hexagonal lattice and make some iterations the result is the following:
 \begin{figure}[h!]
      \centering
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{./figures/lattice2.png}
+		 \incfig{lattice2}
          \caption{$I=2$. Lattice M}
          \label{fig:I2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{./figures/lattice3.png}
+		 \incfig{lattice3}
          \caption{$I=3$}
          \label{fig:3}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{./figures/lattice4.png}
+		 \incfig{lattice4}
          \caption{$I=4$}
          \label{fig:five over x}
      \end{subfigure}
@@ -101,23 +107,15 @@
 \end{figure}
 
 
-We can observe the shape of the limit of covering lattice $L$. It reminds us a sort of Sierpinski triangle, but instead of triangles we have the repeating pattern \ref{fig:I2}.
+We can observe the shape of the limit of covering lattice $L$. It reminds us a sort of Sierpinski triangle. If we slightly change the geometry we end up with a modification of Sierpinski triangle \ref{fig:sier}
 
-\begin{definition}[Weak vertex] We say a vertex of $L$ is weak if it is one exterior vertex of \ref{fig:I2} 
-\end{definition}
 
 \begin{figure}[h!]
     \centering 
-    \includegraphics[width=\textwidth]{./figures/sierpinskimod.png}
+	\incfig{sierpinskimod}
     \caption{Sierpinski modified triangle}
     \label{fig:sier}
 \end{figure}
-
-\begin{observation}All the information we need is encapsulated in the pattern  \ref{fig:I2} and the modification of Sierpinski triangle \ref{fig:sier}.
-
-The lattice $M$ gives us the local information, and the modified Sierpinski the global behaviour setting every weak vertex of $L$ as a vertex of Sierpinski modified triangle.
-\end{observation}
-
 
 
 
